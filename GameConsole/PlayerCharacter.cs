@@ -11,11 +11,11 @@ namespace GameConsole
         // Strings are reference types (object) so it can null
         public string Name { get; set; }
 
-        // Now uses Nullable<T> struct to allow nulls
-        public Nullable<int> DaysSinceLastLogin { get; set; }
-        
-        // Now uses Nullable<T> struct to allow nulls
-        public Nullable<DateTime> DateOfBirth { get; set; }
+        // Now uses Nullable<T> shorthand
+        public int? DaysSinceLastLogin { get; set; }
+
+        // Now uses Nullable<T> shorthand
+        public DateTime? DateOfBirth { get; set; }
 
         public PlayerCharacter()
         {
