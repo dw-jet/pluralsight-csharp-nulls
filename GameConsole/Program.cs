@@ -17,6 +17,8 @@ namespace GameConsole
                 null
             };
 
+            // Array null conditional operator ?[ checks if array element is null
+            // Null conditional operator ?. checks if property of object at that element is null
             string p1 = players?[0]?.Name;
             string p2 = players?[1]?.Name;
             string p3 = players?[2]?.Name;
