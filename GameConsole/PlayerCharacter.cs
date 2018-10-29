@@ -17,10 +17,6 @@ namespace GameConsole
         // Now uses Nullable<T> shorthand
         public DateTime? DateOfBirth { get; set; }
 
-        public PlayerCharacter()
-        {
-            DateOfBirth = null;
-            DaysSinceLastLogin = null;
-        }
+        public bool? isNoob { get; set; }
     }
 }
