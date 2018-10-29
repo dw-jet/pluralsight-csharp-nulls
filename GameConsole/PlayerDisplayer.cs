@@ -23,7 +23,11 @@ namespace GameConsole
             //int days = player.DaysSinceLastLogin.GetValueOrDefault(-1);
 
             // Same as above but using a conditional operator
-            int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1;
+            //int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1;
+
+            // Same as above but using null coalescing operator ??
+            int days = player.DaysSinceLastLogin ?? -1;
+
 
             Console.WriteLine($"{days} days since last login");
 
