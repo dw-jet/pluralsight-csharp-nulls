@@ -40,26 +40,29 @@ namespace GameConsole
             //    Console.WriteLine("No value");
             //}
 
-            if (player.DateOfBirth == null)
-            {
-                Console.WriteLine("No DOB set");
-            }
-            else
+            if (player.DateOfBirth.HasValue)
             {
                 Console.WriteLine(player.DateOfBirth);
             }
-
-            if (player.isNoob == null)
+            else
             {
-                Console.WriteLine("Player status is unknown");
+                Console.WriteLine("No DOB set");
             }
-            else if (player.isNoob == true)
+
+            if (player.isNoob.HasValue)
             {
-                Console.WriteLine("Player is newbie");
+                if (player.isNoob == true)
+                {
+                    Console.WriteLine("Player is newbie");
+                }
+                else
+                {
+                    Console.WriteLine("Player is experienced");
+                }
             }
             else
             {
-                Console.WriteLine("Player is experienced");
+                Console.WriteLine("Player status is unknown");
             }
         }
     }
