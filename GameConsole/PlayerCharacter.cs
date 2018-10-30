@@ -20,15 +20,16 @@ namespace GameConsole
 
         public void Hit(int damage)
         {
-            int damageReduction = 0;
+            //int damageReduction = 0;
 
-            // Have to handle the null case
-            if (_specialDefense != null)
-            {
-                damageReduction = _specialDefense.CalculateDamageReduction(damage);
-            }
+            //// Have to handle the null case
+            //if (_specialDefense != null)
+            //{
+            //    damageReduction = _specialDefense.CalculateDamageReduction(damage);
+            //}
 
-            int totalDamageTaken = damage - damageReduction;
+            // Now that we are handling the possibility of a null object we can just subtract.
+            int totalDamageTaken = damage - _specialDefense.CalculateDamageReduction(damage);
             Health -= totalDamageTaken;
             
 
